@@ -1,5 +1,6 @@
 
 import { useState } from "react";
+import QRCode from "react-qr-code";
 
 export default function App() {
   const [tab, setTab] = useState("user");
@@ -88,6 +89,13 @@ export default function App() {
           )}
         </div>
       )}
+
+      <div className="mt-8 text-center">
+        <p className="mb-2 font-medium">📱 QR-код для доступа к этому сайту:</p>
+        <div className="inline-block p-2 bg-white shadow">
+          <QRCode value="https://qr-portal-rouge.vercel.app" />
+        </div>
+      </div>
     </div>
   );
 }
